@@ -1,18 +1,38 @@
-# Vue 3 + TypeScript + Vite
+# Como rodar o projeto
+Você terá que rodar o projeto na sua máquina pois a News API possui corsNotAllowed. Com a licensa gratuita você só consegue acessar a api pelo localhost.
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+Faça o clone do repossitório para a sua máquina. Depois execute o seguinte comando:
 
-## Recommended IDE Setup
+se tiver usando npm:
+```
+npm install
+```
+se tiver usando yarn:
+```
+yarn
+```
 
-- [VS Code](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+Depois que todas as bibliotecas forem instaladas basta rodar o comando:
+```
+npm run dev
+```
 
-## Type Support For `.vue` Imports in TS
+ou
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+```
+yarn dev
+```
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+# Variáveis de ambiente
 
-1. Disable the built-in TypeScript Extension
-   1. Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-   2. Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+
+Para maior segurança eu deixei a APIKEY do News API em um arquivo .env
+
+
+Crie um arquivo .env na raiz do projeto e adicione a variável VITE_APIKEY dessa maneira:
+```
+VITE_APIKEY=sua_api_key
+```
+
+Precisa ter o prefixo VITE_ pois é assim que o vite entende as variáveis de ambiente no projeto.
+
